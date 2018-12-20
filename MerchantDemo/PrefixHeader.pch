@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  MerchantDemo
+//
+//  Created by 任长远 on 2018/12/18.
+//  Copyright © 2018 王春平. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <MJExtension/MJExtension.h>
+#import <YYCategories/UIApplication+YYAdd.h>
+#import <YYCategories/NSString+YYAdd.h>
+#import <YYCategories/NSDictionary+YYAdd.h>
+#import <UICKeyChainStore/UICKeyChainStore.h>
+#import <GVUserDefaults/GVUserDefaults.h>
+#import "GVUserDefaults+DCPUserDefaultProperty.h"
+//#import "DCPBasicDataService.h"
+//#import "DCPTransactionService.h"
+//#import "DCPBalanceService.h"
+//#import "DCPPushService.h"
+//#import "DCPNotificationService.h"
+//#import "DCPPayService.h"
+//#import "DCPMerchantService.h"
+//#import "DCPaySDKManager.h"
+#import "DCPReportErrorUtil.h"
+#import "DCPAPIResponse.h"
+
+#import "NSString+mbr.h"
+
+#endif /* PrefixHeader_pch */
+

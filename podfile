@@ -1,0 +1,15 @@
+platform:ios, '10.0'
+use_frameworks!
+target "MerchantDemo" do
+pod 'AFNetworking', '~> 3.2.1'
+pod 'MJExtension', '~> 3.0.15.1'
+pod 'YYCategories', '~> 1.0.4'
+pod 'Bugly', '~> 2.5.0'
+pod 'UICKeyChainStore', '~> 2.1.2'
+pod 'GVUserDefaults', '~> 1.0.2'
+pod 'FMDB', '~> 2.7.5'
+
+
+
+
+end
