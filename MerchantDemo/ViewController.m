@@ -31,16 +31,24 @@
     payRequest.coinId = @"34190899187000";
     payRequest.goodsTag = @"20";
     payRequest.industry = @"qr";
-    payRequest.refBizNo = @"2819189";
-    
-    [self pay:payRequest url:@"http://47.52.175.22/dcpayCore/payBills/prepay" success:^(NSString *message, DCPPayResponse *payResponse) {
+    payRequest.refBizNo = @"2855656564";
+
+    [self pay:payRequest url:[NSString stringWithFormat:@"%@%@", DCP_BASEURI, @"dcpayCore/payBills/prepay"] success:^(NSString *message, DCPPayResponse *payResponse) {
 //        NSString *url = [NSString stringWithFormat:@"cospay://pay?fromScheme=merchant&orderInfo=%@", payResponse.mj_JSONString];
-        NSString *url = [NSString stringWithFormat:@"cospay://pay?fromScheme=merchant&merchantId=%@&refBizNo=%@&payBillNo=%@&coinId=%@&toAddr=%@&amount=%@&attach=%@", payResponse.merchantId, payResponse.refBizNo, payResponse.payBillNo, payResponse.coinId, payResponse.toAddr, payResponse.amount, payResponse.attach];
+        NSString *url = @"cospay://pay?fromScheme=merchant";
+        NSDictionary *paramDictionary = payResponse.mj_keyValues;
+        for (NSString *key in paramDictionary) {
+            NSString *value = paramDictionary[key];
+            if (value.length > 0) {
+                url = [url stringByAppendingFormat:@"&%@=%@", key, value];
+            }
+        }
+        url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{UIApplicationOpenURLOptionsSourceApplicationKey: @YES} completionHandler:^(BOOL success) {
             if (success) {
-//                NSLog(@"yes-----------");
+                NSLog(@"yes-----------");
             } else {
-//                NSLog(@"no----------");
+                NSLog(@"no----------");
             }
         }];
     } failure:^(NSString *message, NSInteger code) {

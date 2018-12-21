@@ -409,8 +409,8 @@
 		BB4ECC3621C8C85900664F1B /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				BB4ECC3721C8C85900664F1B /* DCPResourceURI.m */,
 				BB4ECC3821C8C85900664F1B /* DCPResourceURI.h */,
+				BB4ECC3721C8C85900664F1B /* DCPResourceURI.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";

@@ -29,6 +29,8 @@
 //#import "DCPaySDKManager.h"
 #import "DCPReportErrorUtil.h"
 #import "DCPAPIResponse.h"
+#import "DCPResourceURI.h"
+#import "DCPResource.h"
 
 #import "NSString+mbr.h"
 

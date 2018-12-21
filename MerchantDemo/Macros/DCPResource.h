@@ -9,6 +9,11 @@
 #import <YYCategories/UIColor+YYAdd.h>
 #import "DCPI18nManager.h"
 
+static NSString * const defaultValueApiVersion = @"1.0.0";
+static NSString * const defaultValueAppMechantId = @"10000000000003";
+//渠道
+static NSString * const defaultChannel = @"73088886094001";
+
 // 本地化字符串
 //#define DCPString(key) NSLocalizedString(key, nil)
 #define DCPString(key) [DCPI18nManager localizedStringWithKey:key]

@@ -10,11 +10,6 @@
 #import "DCPDeviceIdUtil.h"
 #import "DCPI18nManager.h"
 
-static NSString* defaultValueApiVersion = @"1.0.0";
-static NSString* defaultValueAppMechantId = @"10000000000003";
-//渠道
-static NSString *defaultChannel = @"73088886094001";
-
 @interface DCPAPIRequestBuilder()
 
 @property(nonatomic,strong) NSMutableDictionary* _Nonnull device;
