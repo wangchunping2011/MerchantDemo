@@ -24,6 +24,7 @@
     
 }
 
+//支付按钮响应事件
 - (IBAction)payAction:(UIButton *)sender {
     DCPPayRequest *payRequest = [[DCPPayRequest alloc] init];
     payRequest.amount = @"0.001";
@@ -31,10 +32,10 @@
     payRequest.coinId = @"34190899187000";
     payRequest.goodsTag = @"20";
     payRequest.industry = @"qr";
-    payRequest.refBizNo = @"2855656564";
+    payRequest.refBizNo = [NSString stringWithFormat:@"%@%d", @"2891018", arc4random() % 200];
 
-    [self pay:payRequest url:[NSString stringWithFormat:@"%@%@", DCP_BASEURI, @"dcpayCore/payBills/prepay"] success:^(NSString *message, DCPPayResponse *payResponse) {
-//        NSString *url = [NSString stringWithFormat:@"cospay://pay?fromScheme=merchant&orderInfo=%@", payResponse.mj_JSONString];
+    [self pay:payRequest url:[NSString stringWithFormat:@"%@%@", DCP_BASEURI, DCP_PREPAY] success:^(NSString *message, DCPPayResponse *payResponse) {
+        //跳转钱包App的url
         NSString *url = @"cospay://pay?fromScheme=merchant";
         NSDictionary *paramDictionary = payResponse.mj_keyValues;
         for (NSString *key in paramDictionary) {
@@ -45,18 +46,18 @@
         }
         url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{UIApplicationOpenURLOptionsSourceApplicationKey: @YES} completionHandler:^(BOOL success) {
-            if (success) {
-                NSLog(@"yes-----------");
-            } else {
-                NSLog(@"no----------");
-            }
+//            if (success) {
+//                NSLog(@"yes-----------");
+//            } else {
+//                NSLog(@"no----------");
+//            }
         }];
     } failure:^(NSString *message, NSInteger code) {
-        NSLog(@"error:%@, %ld", message, (long)code);
-        
+//        NSLog(@"error:%@, %ld", message, (long)code);
     }];
 }
 
+//预支付
 - (void)pay:(DCPPayRequest *)payRequest url:(NSString *)url
     success:(void (^_Nonnull)(NSString* message,DCPPayResponse *payResponse))success
     failure:(void (^_Nonnull)(NSString* message,NSInteger code))failure {

@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 //环境地址
-//const NSString * const DCP_BASEURI = @"http://192.168.1.223:8101/";//测试环境
-const NSString * const DCP_BASEURI = @"http://47.52.175.22/";//正式环境域名
+const NSString * const DCP_BASEURI = @"http://192.168.1.223:8101/";//测试环境
+//const NSString * const DCP_BASEURI = @"http://47.52.175.22/";//正式环境域名
 
 //预支付
 const NSString* const DCP_PREPAY = @"dcpayCore/payBills/prepay";
