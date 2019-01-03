@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB06D0FE21DDBE8E00A04C93 /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = BB06D0FD21DDBE8E00A04C93 /* UIView+Extend.m */; };
+		BB0DAD6A21D61024004481B5 /* UIViewController+MBPHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0DAD6821D61024004481B5 /* UIViewController+MBPHUD.m */; };
+		BB0DAD6B21D61024004481B5 /* UIView+MBPHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0DAD6921D61024004481B5 /* UIView+MBPHUD.m */; };
 		BB4ECBC921C8A5DA00664F1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4ECBC821C8A5DA00664F1B /* AppDelegate.m */; };
 		BB4ECBCC21C8A5DA00664F1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4ECBCB21C8A5DA00664F1B /* ViewController.m */; };
 		BB4ECBCF21C8A5DA00664F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4ECBCD21C8A5DA00664F1B /* Main.storyboard */; };
@@ -97,6 +100,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB06D0FC21DDBE8E00A04C93 /* UIView+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
+		BB06D0FD21DDBE8E00A04C93 /* UIView+Extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
+		BB0DAD6621D61024004481B5 /* UIView+MBPHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MBPHUD.h"; sourceTree = "<group>"; };
+		BB0DAD6721D61024004481B5 /* UIViewController+MBPHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBPHUD.h"; sourceTree = "<group>"; };
+		BB0DAD6821D61024004481B5 /* UIViewController+MBPHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBPHUD.m"; sourceTree = "<group>"; };
+		BB0DAD6921D61024004481B5 /* UIView+MBPHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MBPHUD.m"; sourceTree = "<group>"; };
 		BB4ECBC421C8A5DA00664F1B /* MerchantDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MerchantDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4ECBC721C8A5DA00664F1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB4ECBC821C8A5DA00664F1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -318,12 +327,18 @@
 		BB0F89AE21CB43D9003A1382 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				BB0DAD6621D61024004481B5 /* UIView+MBPHUD.h */,
+				BB0DAD6921D61024004481B5 /* UIView+MBPHUD.m */,
+				BB0DAD6721D61024004481B5 /* UIViewController+MBPHUD.h */,
+				BB0DAD6821D61024004481B5 /* UIViewController+MBPHUD.m */,
 				BB4ECD1A21C8CE6300664F1B /* GVUserDefaults+DCPUserDefaultProperty.h */,
 				BB4ECD1B21C8CE6400664F1B /* GVUserDefaults+DCPUserDefaultProperty.m */,
 				BB4ECD1721C8CA8000664F1B /* NSString+mbr.h */,
 				BB4ECD1621C8CA8000664F1B /* NSString+mbr.m */,
 				BB4ECD2421C8CF3B00664F1B /* NSString+DCPSHA256.h */,
 				BB4ECD2321C8CF3B00664F1B /* NSString+DCPSHA256.m */,
+				BB06D0FC21DDBE8E00A04C93 /* UIView+Extend.h */,
+				BB06D0FD21DDBE8E00A04C93 /* UIView+Extend.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -765,6 +780,8 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GVUserDefaults/GVUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
@@ -774,6 +791,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GVUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
@@ -818,10 +837,13 @@
 				BB4ECCE321C8C8F300664F1B /* DCPBalance.m in Sources */,
 				BB4ECD1521C8C9C800664F1B /* DCPDeviceIdUtil.m in Sources */,
 				BB4ECCD921C8C8F300664F1B /* DCPUpdate.m in Sources */,
+				BB0DAD6B21D61024004481B5 /* UIView+MBPHUD.m in Sources */,
 				BB4ECD0E21C8C9C800664F1B /* DCPAddressManager.m in Sources */,
+				BB06D0FE21DDBE8E00A04C93 /* UIView+Extend.m in Sources */,
 				BB4ECD1021C8C9C800664F1B /* DCPFileManager.m in Sources */,
 				BB4ECCE721C8C8F300664F1B /* DCPAddressInfo.m in Sources */,
 				BB4ECC6821C8C85A00664F1B /* DCPRSAHelper.m in Sources */,
+				BB0DAD6A21D61024004481B5 /* UIViewController+MBPHUD.m in Sources */,
 				BB4ECC6721C8C85A00664F1B /* DCPRSA.m in Sources */,
 				BB4ECD0D21C8C9C800664F1B /* DCPBasicDataManager.m in Sources */,
 				BB4ECD0821C8C9C800664F1B /* DCPKeychainManager.m in Sources */,

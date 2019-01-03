@@ -12,6 +12,10 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
+#define kWindow [UIApplication sharedApplication].keyWindow
+
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 #import <MJExtension/MJExtension.h>
 #import <YYCategories/UIApplication+YYAdd.h>
 #import <YYCategories/NSString+YYAdd.h>
@@ -19,20 +23,16 @@
 #import <UICKeyChainStore/UICKeyChainStore.h>
 #import <GVUserDefaults/GVUserDefaults.h>
 #import "GVUserDefaults+DCPUserDefaultProperty.h"
-//#import "DCPBasicDataService.h"
-//#import "DCPTransactionService.h"
-//#import "DCPBalanceService.h"
-//#import "DCPPushService.h"
-//#import "DCPNotificationService.h"
-//#import "DCPPayService.h"
-//#import "DCPMerchantService.h"
-//#import "DCPaySDKManager.h"
 #import "DCPReportErrorUtil.h"
 #import "DCPAPIResponse.h"
 #import "DCPResourceURI.h"
 #import "DCPResource.h"
+#import "DCPBgCoin.h"
 
 #import "NSString+mbr.h"
+#import "UIViewController+MBPHUD.h"
+#import "UIView+MBPHUD.h"
+#import "UIView+Extend.h"
 
 #endif /* PrefixHeader_pch */
 

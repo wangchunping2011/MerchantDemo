@@ -8,8 +8,8 @@ pod 'Bugly', '~> 2.5.0'
 pod 'UICKeyChainStore', '~> 2.1.2'
 pod 'GVUserDefaults', '~> 1.0.2'
 pod 'FMDB', '~> 2.7.5'
-
-
+pod 'MBProgressHUD', '~> 1.1.0'
+pod 'IQKeyboardManager', '~> 6.2.0'
 
 
 end
